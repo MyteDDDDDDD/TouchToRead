@@ -1,7 +1,8 @@
 # TouchToRead
-C++ openCV Visual Studio;
+C++;
+openCV3.2;
+Visual Studio;
 
-R k-means RStudio;
 
 wiiRemoteCommander + wii remote;
 
