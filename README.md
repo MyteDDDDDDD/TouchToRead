@@ -1,6 +1,6 @@
 # TouchToRead
 C++;
-openCV3.2;
+openCV3.2.0;
 Visual Studio;
 
 
