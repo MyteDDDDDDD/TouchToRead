@@ -1,4 +1,11 @@
 # TouchToRead
+C++ openCV Visual Studio;
+
+R k-means RStudio;
+
+wiiRemoteCommander + wii remote;
+
+
 
 1.图片输入；
 
