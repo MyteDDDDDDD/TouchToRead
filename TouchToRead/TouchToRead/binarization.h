@@ -1,15 +1,17 @@
 #pragma once
-#include<opencv2\opencv.hpp>
+#include<opencv2/opencv.hpp>
 #include<string>
 using namespace std;
+using namespace cv;
 
 
-void creatGrayIm(IplImage* srcP, IplImage* dstP) {
-	cvCvtColor(srcP, dstP, CV_BGR2GRAY);
-
+void creatGrayIm(Mat &srcP,Mat &dstP) {
+	cvtColor(srcP, dstP, CV_BGR2GRAY);
 }
 
-void creatBinaryIm(string* srcP , string* dstP) {
-
+void creatBinaryIm(Mat &srcP, Mat& dstP, int p) {
+	if (p != 0) {
+		threshold(srcP, dstP, p, 255, CV_THRESH_BINARY);
+	}
 
 }

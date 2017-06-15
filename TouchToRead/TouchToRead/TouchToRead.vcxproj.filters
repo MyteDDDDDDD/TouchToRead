@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Binarization">
-      <UniqueIdentifier>{cfa9acf4-2814-437e-b99d-b4dd3cc27728}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainFlow.cpp">
@@ -28,11 +25,11 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="binarization.cpp">
-      <Filter>Source Files\Binarization</Filter>
-    </ClInclude>
     <ClInclude Include="binarization.h">
-      <Filter>Source Files\Binarization</Filter>
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projection.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

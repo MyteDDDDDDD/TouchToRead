@@ -149,9 +149,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="binarization.cpp" />
     <ClCompile Include="mainFlow.cpp" />
     <ClInclude Include="binarization.h" />
+    <ClInclude Include="projection.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\..\Desktop\test1.jpg" />

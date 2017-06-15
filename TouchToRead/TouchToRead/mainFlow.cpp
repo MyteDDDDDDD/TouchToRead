@@ -1,22 +1,42 @@
 #include "binarization.h"
-#include<opencv2\opencv.hpp>
-using namespace std;
+#include "projection.h"
+#include<opencv2/opencv.hpp>
 
+using namespace std;
+using namespace cv;
+
+const char* srcURL="test3.png";
 
 int main() {
 	//load source image
-	string srcURL;
-	cout<< "please enter source URL" << endl;
-	cin >> srcURL;
-	IplImage *src = cvLoadImage("test2.png",CV_LOAD_IMAGE_UNCHANGED);
+
+	/*cout<< "please enter source URL" << endl;
+	cin >> srcURL;*/
+
+	Mat src = imread(srcURL);
+	imshow("orginal image", src);
 	//create a gray image
-	IplImage *grayIm=cvCreateImage(cvGetSize(src),IPL_DEPTH_8U,1);
+	Mat grayIm(src.cols, src.rows, CV_8UC1);
+
 	creatGrayIm(src, grayIm);
 	//cvShowImage("title",grayIm);
 	
-	IplImage* binIm = cvCreateImage(cvGetSize(grayIm), IPL_DEPTH_8U, 1);
-	cvThreshold(grayIm, binIm, 1, 255, CV_THRESH_BINARY);
-	cvShowImage("binary title", binIm);
+	//create a binary image with the same size of gray image
+	Mat binIm(grayIm.cols, grayIm.rows, CV_8UC1);
+
+	int threhold=127;
+
+	creatBinaryIm(grayIm, binIm,threhold);
+	imshow("binary image", binIm);
+
+	//do projection
+	horizontalPro(binIm);
+	verticalPro(binIm);
+	//show projection result
+	showPor();
+
 	cvWaitKey(0);
+
+
 	return 0;
 }
