@@ -27,14 +27,14 @@ int main() {
 	int threhold=127;
 
 	creatBinaryIm(grayIm, binIm,threhold);
-	imshow("binary image", binIm);
+	//imshow("binary image", binIm);
 
 	//do projection
-	horizontalPro(binIm);
-	verticalPro(binIm);
-	//show projection result
-	showPor();
-
+	doProjection(binIm);
+	/*horizontalPro(binIm);
+	verticalPro(binIm);*/
+	showPro();
+	showRect(src);
 	cvWaitKey(0);
 
 
